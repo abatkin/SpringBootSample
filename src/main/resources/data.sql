@@ -1,3 +1,3 @@
-INSERT INTO Person (FirstName, LastName, Age) VALUES ('Jon', 'Doe', '42');
-INSERT INTO Person (FirstName, LastName, Age) VALUES ('Jane', 'Doe', '41');
-INSERT INTO Person (FirstName, LastName, Age) VALUES ('Mister', 'Smith', '54');
+INSERT INTO Person (FirstName, LastName, DateOfBirth) VALUES ('Jon', 'Doe', '1980-12-21');
+INSERT INTO Person (FirstName, LastName, DateOfBirth) VALUES ('Jane', 'Doe', '1990-12-21');
+INSERT INTO Person (FirstName, LastName, DateOfBirth) VALUES ('Mister', 'Smith', '2000-12-21');

@@ -1,18 +1,24 @@
 package net.batkin.springBootTest;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 public class Person {
 
 	private String firstName;
 	private String lastName;
-	private int age;
+
+	@JsonFormat(pattern="yyyy-MM-dd")
+	private Date dateOfBirth;
 
 	public Person() {
 	}
 
-	public Person(String firstName, String lastName, int age) {
+	public Person(String firstName, String lastName, Date dateOfBirth) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.age = age;
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getFirstName() {
@@ -31,11 +37,11 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	public int getAge() {
-		return age;
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 }

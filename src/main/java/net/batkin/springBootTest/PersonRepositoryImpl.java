@@ -16,6 +16,6 @@ public class PersonRepositoryImpl implements PersonRepository {
 
 	@Override
 	public List<Person> getAllPeople() {
-		return jt.query("SELECT FirstName, LastName, Age FROM Person", new BeanPropertyRowMapper(Person.class));
+		return jt.query("SELECT FirstName, LastName, DateOfBirth FROM Person", new BeanPropertyRowMapper(Person.class));
 	}
 }
