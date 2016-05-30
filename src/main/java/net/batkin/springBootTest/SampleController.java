@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/services")
 public class SampleController {
 
-	@Autowired
 	private PersonService personService;
+
+	@Autowired
+	public SampleController(PersonService personService) {
+		this.personService = personService;
+	}
 
 	@RequestMapping(value = "/sayHello/{user}", method = RequestMethod.GET)
 	public String sayHello(@PathVariable("user") String user) {
