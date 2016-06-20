@@ -1,5 +1,6 @@
 package net.batkin.springBootTest;
 
+import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration;
 import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
 import org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration;
@@ -32,7 +33,18 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         PropertyPlaceholderAutoConfiguration.class,
         ServerPropertiesAutoConfiguration.class,
         TransactionAutoConfiguration.class,
-        WebMvcAutoConfiguration.class
+        WebMvcAutoConfiguration.class,
+
+        AuditAutoConfiguration.class,
+        EndpointAutoConfiguration.class,
+        EndpointMBeanExportAutoConfiguration.class,
+        EndpointWebMvcAutoConfiguration.class,
+        HealthIndicatorAutoConfiguration.class,
+        ManagementServerPropertiesAutoConfiguration.class,
+        ManagementWebSecurityAutoConfiguration.class,
+        MetricFilterAutoConfiguration.class,
+        MetricRepositoryAutoConfiguration.class,
+        PublicMetricsAutoConfiguration.class,
 })
 @EnableTransactionManagement
 public class SampleConfiguration {
